@@ -82,6 +82,9 @@ highway = [dillo1, dillo2, parrot1, parrot2]  -- Liste
 -- 3. "später"
 -- dabei: suchen nach Selbstbezügen
 
+-- Currency Swap
+-- Am 24.12.2021: bekomme 100€ UND bezahle 100GBP
+
 data Currency = EUR | CHF | GBP 
   deriving Show
 
@@ -103,7 +106,13 @@ zcb1 = ZeroCouponBond 100 EUR (Date "2021-12-24")
 data Contract =
     One Currency -- "bekomme 1EUR jetzt", "bekomme 1CHF jetzt"
   | Multiple Double Contract -- "bekomme 100ER jetzt"
+  | Later Date Contract
+  | Change Currency Contract
   deriving Show
 
+zeroCouponBond :: Double -> Currency -> Date -> Contract
+zeroCouponBond amount currency date =
+    Later date (Multiple amount (One currency))
 
-
+-- zcb1 = Later (Date "2021-12-24") (Multiple 100 (One EUR))
+zcb1 = zeroCouponBond 100 EUR (Date "2021-12-24")
