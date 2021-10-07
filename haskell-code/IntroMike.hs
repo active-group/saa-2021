@@ -23,8 +23,8 @@ dillo1 :: Animal
 dillo1 = Dillo Alive 10
 
 dillo2 :: Animal
--- totes Gürteltier, 12kg
-dillo2 = Dillo Dead 12
+-- totes Gürteltier, 11kg
+dillo2 = Dillo Dead 11
 
 
 
