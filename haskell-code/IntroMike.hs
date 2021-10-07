@@ -107,7 +107,7 @@ data Contract =
     One Currency -- "bekomme 1EUR jetzt", "bekomme 1CHF jetzt"
   | Multiple Double Contract -- "bekomme 100ER jetzt"
   | Later Date Contract
-  | Change Currency Contract
+  | Change Contract
   deriving Show
 
 zeroCouponBond :: Double -> Currency -> Date -> Contract
