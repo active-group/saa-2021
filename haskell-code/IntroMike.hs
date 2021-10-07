@@ -116,3 +116,4 @@ zeroCouponBond amount currency date =
 
 -- zcb1 = Later (Date "2021-12-24") (Multiple 100 (One EUR))
 zcb1 = zeroCouponBond 100 EUR (Date "2021-12-24")
+zcb2 = Change (zeroCouponBond 100 GBP (Date "2021-12-24"))
