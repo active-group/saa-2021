@@ -67,13 +67,41 @@ class Semigroup t where
 class Semigroup t => Monoid t where
     zero :: t 
 
-
-
-
 highway :: [Animal]
 highway = [dillo1, dillo2, parrot1, parrot2]  -- Liste
 
+-- Financial Contracts
 
+-- mit Domänenexpert:in sprechen: einfaches Beispiel
+-- Zero-Bond / Zero-Coupon Bond:
+-- "Ich bekomme 100€ am 24. Dezember 2021"
+
+-- einfaches Beispiel in "atomare Teile" zerlegen
+-- 1. "Währung"
+-- 2. "mehrere"
+-- 3. "später"
+
+data Currency = EUR | CHF | GBP 
+  deriving Show
+
+data Date = Date String
+  deriving (Show, Ord, Eq)
+
+{-
+data Contract =
+    ZeroCouponBond Double Currency Date
+  | Future
+  | Everest
+  -- ...
+  deriving Show
+
+zcb1 :: Contract
+zcb1 = ZeroCouponBond 100 EUR (Date "2021-12-24")
+-}
+
+data Contract =
+    One Currency
+  deriving Show
 
 
 
