@@ -46,6 +46,29 @@ feedAnimal amount (Dillo Alive w) = Dillo Alive (w + amount)
 feedAnimal amount (Dillo Dead w) = Dillo Dead w
 feedAnimal amount (Parrot s w) = Parrot s (w + amount)
 
+-- Assoziativität, "Klammern sind egal"
+-- (a + b) + c = a + (b + c)
+-- (a * b) * c = a * (b * c)
+
+-- Gegeben eine Menge/Typ t und eine Operation:
+-- op :: t -> t -> t (binäre Operation, Kombinator)
+-- op (op a b) c = op a (op b c)
+-- Halbgruppe / Semigroup
+
+-- Typklasse (KEINE OO-KLASSE! eher INTERFACE)
+class Semigroup t where 
+    op :: t -> t -> t 
+
+-- neutrales Element / Identity / zero
+-- a + 0 = 0 + a = a
+-- a * 1 = 1 * 1 = a
+-- Halbgruppe + neutrales Element = Monoid
+
+class Semigroup t => Monoid t where
+    zero :: t 
+
+
+
 
 highway :: [Animal]
 highway = [dillo1, dillo2, parrot1, parrot2]  -- Liste
