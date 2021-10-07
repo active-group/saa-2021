@@ -100,7 +100,8 @@ zcb1 = ZeroCouponBond 100 EUR (Date "2021-12-24")
 -}
 
 data Contract =
-    One Currency
+    One Currency -- "bekomme 1EUR jetzt", "bekomme 1CHF jetzt"
+  | Multiple Double Currency -- "bekomme 100ER jetzt"
   deriving Show
 
 
