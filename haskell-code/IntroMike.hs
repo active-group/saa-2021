@@ -80,6 +80,7 @@ highway = [dillo1, dillo2, parrot1, parrot2]  -- Liste
 -- 1. "Währung"
 -- 2. "mehrere"
 -- 3. "später"
+-- dabei: suchen nach Selbstbezügen
 
 data Currency = EUR | CHF | GBP 
   deriving Show
