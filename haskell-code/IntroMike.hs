@@ -122,5 +122,5 @@ zcb2 = Change (zeroCouponBond 100 GBP (Date "2021-12-24"))
 cswap = And zcb1 zcb2
 
 currencySwap date amount1 currency1 amount2 currency2 =
-    And (zeroCouponBond amount1 date currency1)
-        (Change (zeroCouponBond amount2 date currency2))
+    And (zeroCouponBond amount1 currency1 date)
+        (Change (zeroCouponBond amount2 currency2 date))
