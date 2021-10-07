@@ -8,5 +8,6 @@ import Prelude hiding (Functor, Monad, Monoid, Semigroup)
 -- - tot oder lebendig
 -- - Gewicht
 
-data Liveness 
+data Liveness = Dead | Alive
+
 
