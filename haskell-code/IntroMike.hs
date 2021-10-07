@@ -41,6 +41,10 @@ runOverAnimal :: Animal -> Animal
 runOverAnimal (Dillo l w) = Dillo Dead w
 runOverAnimal (Parrot s w) = Parrot "" w 
 
+feedAnimal :: Weight -> (Animal -> Animal)
+feedAnimal amount (Dillo Alive w) = Dillo Alive (w + amount)
+feedAnimal amount (Dillo Dead w) = Dillo Dead w
+feedAnimal amount (Parrot s w) = Parrot s (w + amount)
 
 
 
