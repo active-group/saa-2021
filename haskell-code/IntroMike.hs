@@ -28,7 +28,8 @@ dillo2 :: Animal
 dillo2 = Dillo Dead 11
 
 -- Tier überfahren
-runOverAnimal :: 
+runOverAnimal :: Animal -> Animal
+runOverAnimal (Dillo l w) = Dillo Dead w
 
 
 
