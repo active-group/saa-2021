@@ -61,7 +61,7 @@ class Semigroup t where
 
 -- neutrales Element / Identity / zero
 -- a + 0 = 0 + a = a
--- a * 1 = 1 * 1 = a
+-- a * 1 = 1 * a = a
 -- Halbgruppe + neutrales Element = Monoid
 
 class Semigroup t => Monoid t where
