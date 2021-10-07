@@ -14,6 +14,7 @@ data Liveness = Dead | Alive
 
 type Weight = Integer
 
+-- Zustand des Tiers zu einem bestimmten Zeitpunkt
 data Animal =
     Dillo Liveness Weight
     deriving Show
@@ -26,6 +27,8 @@ dillo2 :: Animal
 -- totes Gürteltier, 11kg
 dillo2 = Dillo Dead 11
 
+-- Tier überfahren
+runOverAnimal :: 
 
 
 
