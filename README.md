@@ -1,25 +1,23 @@
-# Introduction to Functional Architecture @ Software Architecture Gathering 2021
+# Funktionales Taktisches Design / Software Architecture Alliance 2021
 
-## Following along
+## Hauptteil
 
-If you want to write and play around with the code at the workshop
-yourself, we recommend you install a ghc Haskell environment.  You can
-do this as follows:
+- [Docker](https://www.docker.com/) installieren
+- der Docker-VM ggf. mindestens 6GB Speicher geben
+- [Visual Studio Code](https://code.visualstudio.com/download) installieren
+- die Extension "Remote - Containers" installieren:
+  Auf das Extensions-Icon links klicken, nach "Containers" suchen,
+  "Remote - Containers" anwählen, auf "Install" klicken
+- auf das Datei-Icon links oben klicken
+- oben im Menü "View" -> "Command Palette", dort
+  "containers" tippen, "Remote - Containers: Open Folder in Container" selektieren
+- das Verzeichnis `haskell-code` selektieren
+- dort die Datei `Intro.hs` aufmachen und etwas ändern
 
-- install [Docker](https://www.docker.com/)
-- if applicable (macOS), give the Docker VM ggf. at least 6GB RAM
-- install [Visual Studio Code](https://code.visualstudio.com/download)
-- install the "Remote - Containers" extension:
-  (Click on the  extensions icon on the left, search for "Containers",
-  select "Remote - Containers",  click "Install")
-- click on the File icon in the upper-left corner
-- select "View" -> "Command Palette", and type
-  "containers", select "Remote - Containers: Open Folder in Container"
-- select `haskell-code` folder
-- open file `Intro.hs` and make a small change
+Da sollte jetzt eine Meldung erscheinen, dass ein Docker-Image gebaut
+wird.  Das kann eine Weile dauern, sollte aber ohne Fehlermeldung
+vonstatten gehen.
 
+## Bei Problemen:
 
-A message should appear that it's building a Docker image.  This might
-take a while, but should happen without an error message.
-
-In case of problems, contact Mike Sperber.
+... bitte Mike Sperber kontaktieren.
