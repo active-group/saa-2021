@@ -47,6 +47,9 @@ feedAnimal amount (Dillo Dead w) = Dillo Dead w
 feedAnimal amount (Parrot s w) = Parrot s (w + amount)
 
 
+highway :: [Animal]
+highway = [dillo1, dillo2, parrot1, parrot2]  -- Liste
+
 
 
 
