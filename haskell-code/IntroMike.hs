@@ -11,6 +11,11 @@ import Prelude hiding (Functor, Monad, Monoid, Semigroup)
 data Liveness = Dead | Alive
   deriving Show
 
+type Weight = Integer
+
+data Animal =
+    Dillo Liveness Weight
+    deriving Show
 
 
 
