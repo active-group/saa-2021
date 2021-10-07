@@ -108,6 +108,7 @@ data Contract =
   | Multiple Double Contract -- "bekomme 100ER jetzt"
   | Later Date Contract
   | Change Contract -- dreht alle Zahlungsrichtungen um
+  | And Contract Contract
   deriving Show
 
 zeroCouponBond :: Double -> Currency -> Date -> Contract
